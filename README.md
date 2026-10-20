@@ -15,5 +15,4 @@ Dvojklikem otevřete soubor `index.html` v prohlížeči. Nic dalšího není po
 - `style.css` – vzhled (světlý i tmavý režim podle nastavení systému)
 - `assets/panel.png` – screenshot ovládacího panelu z ukázky
   [portfolio-report-demo](https://github.com/Kucera1/portfolio-report-demo) (vymyšlená data)
-
-Kontakt v sekci „Kontakt“ je zatím zástupný text `KONTAKT_EMAIL_DOPLNIT`, před zveřejněním ho nahraďte.
+- `assets/simulator.png` – graf ze simulátoru (syntetická data)
