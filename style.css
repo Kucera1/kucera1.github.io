@@ -1,0 +1,384 @@
+/* Jednoduchý, střídmý vzhled: systémová písma, jedna akcentní barva, světlý i tmavý režim. */
+
+:root {
+  --pozadi: #fbfbf9;
+  --pozadi-tonovane: #f2f3ef;
+  --text: #1e2124;
+  --text-tlumeny: #5a6066;
+  --linka: #dcdfd8;
+  --akcent: #1f6f5c;
+  --akcent-hover: #175747;
+  --akcent-text: #ffffff;
+  --akcent-jemny: #e3f0eb;
+  --sirka: 68rem;
+  --sirka-uzka: 46rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pozadi: #16191b;
+    --pozadi-tonovane: #1d2124;
+    --text: #e8eae6;
+    --text-tlumeny: #a7aeb3;
+    --linka: #33393d;
+    --akcent: #5cc4a6;
+    --akcent-hover: #7fd3bb;
+    --akcent-text: #0d1f1a;
+    --akcent-jemny: #1f3530;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--pozadi);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--akcent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--akcent-hover);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--akcent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 0 0 0.6em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.obal {
+  max-width: var(--sirka);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.obal--uzky {
+  max-width: var(--sirka-uzka);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.obal.obal--uzky {
+  padding: 0 1.25rem;
+}
+
+/* Odkaz pro čtečky a klávesnici */
+.preskocit {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: 0.5rem 1rem;
+  background: var(--akcent);
+  color: var(--akcent-text);
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.preskocit:focus {
+  top: 1rem;
+}
+
+/* Hlavička */
+.hlavicka {
+  border-bottom: 1px solid var(--linka);
+  padding: 2.25rem 0 1.5rem;
+}
+
+.hlavicka__obal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+}
+
+.hlavicka h1 {
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.4rem);
+  margin: 0;
+}
+
+.podtitul {
+  margin: 0.35rem 0 0;
+  color: var(--text-tlumeny);
+  font-size: 1.0625rem;
+}
+
+.navigace {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navigace a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.navigace a:hover {
+  color: var(--akcent);
+  border-bottom-color: var(--akcent);
+}
+
+/* Sekce */
+.sekce {
+  padding: clamp(3rem, 2rem + 4vw, 5.5rem) 0;
+  scroll-margin-top: 1rem;
+}
+
+.sekce--tonovana {
+  background: var(--pozadi-tonovane);
+}
+
+.uvod {
+  font-size: 1.1875rem;
+  line-height: 1.6;
+}
+
+/* Ukázka */
+.ukazka {
+  margin: 1.5rem auto 2rem;
+  max-width: 56rem;
+}
+
+.ukazka__nadpis {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ukazka__obrazek {
+  display: block;
+  max-height: 34rem;
+  overflow: hidden;
+  border: 1px solid var(--linka);
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 6%), 0 8px 24px rgb(0 0 0 / 6%);
+}
+
+.ukazka figcaption {
+  margin-top: 0.75rem;
+  color: var(--text-tlumeny);
+  font-size: 0.9375rem;
+  text-align: center;
+}
+
+.ukazka__text {
+  text-align: center;
+}
+
+.tlacitka {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.tlacitko {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  border: 2px solid var(--akcent);
+  border-radius: 8px;
+  color: var(--akcent);
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+.tlacitko:hover {
+  background: var(--akcent-jemny);
+  color: var(--akcent-hover);
+}
+
+.tlacitko--hlavni {
+  background: var(--akcent);
+  color: var(--akcent-text);
+}
+
+.tlacitko--hlavni:hover {
+  background: var(--akcent-hover);
+  border-color: var(--akcent-hover);
+  color: var(--akcent-text);
+}
+
+/* Příklad */
+.priklad {
+  margin: 0 0 1rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid var(--akcent);
+  background: var(--akcent-jemny);
+  border-radius: 0 8px 8px 0;
+  font-size: 1.125rem;
+}
+
+.priklad p {
+  margin: 0;
+}
+
+.poznamka {
+  color: var(--text-tlumeny);
+  font-size: 0.9375rem;
+}
+
+/* Kroky spolupráce */
+.kroky {
+  list-style: none;
+  counter-reset: krok;
+  margin: 1.5rem 0 2.5rem;
+  padding: 0;
+}
+
+.kroky li {
+  counter-increment: krok;
+  position: relative;
+  padding: 0 0 1.5rem 3.25rem;
+}
+
+.kroky li::before {
+  content: counter(krok);
+  position: absolute;
+  left: 0;
+  top: -0.1rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--akcent);
+  color: var(--akcent-text);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.kroky h3 {
+  margin-bottom: 0.25rem;
+}
+
+.kroky p {
+  margin: 0;
+}
+
+.podminky {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1rem;
+}
+
+.podminky__blok {
+  background: var(--pozadi);
+  border: 1px solid var(--linka);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+}
+
+.podminky__blok ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.podminky__blok p {
+  margin: 0;
+}
+
+/* Kontakt */
+.sekce--kontakt {
+  text-align: center;
+}
+
+.kontakt__odkaz {
+  margin-top: 0.5rem;
+  word-break: break-all;
+}
+
+/* Patička */
+.paticka {
+  border-top: 1px solid var(--linka);
+  padding: 1.75rem 0;
+  color: var(--text-tlumeny);
+  font-size: 0.9375rem;
+}
+
+.paticka__obal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.paticka p {
+  margin: 0;
+}
+
+@media (max-width: 40rem) {
+  .hlavicka {
+    padding-top: 1.5rem;
+  }
+
+  .navigace {
+    gap: 0.3rem 1rem;
+  }
+
+  .uvod {
+    font-size: 1.125rem;
+  }
+
+  .tlacitka .tlacitko {
+    width: 100%;
+    text-align: center;
+  }
+}

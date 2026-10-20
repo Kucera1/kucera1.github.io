@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaroslav Kučera – Automatizace a reporty v Pythonu pro malé firmy</title>
+  <meta name="description" content="Automatický týdenní report pro malé firmy: data z e-shopu, tabulek a skladu načte, vyčistí a připraví přehled v Excelu i PDF. Nic neodejde bez vašeho schválení.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="preskocit" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="hlavicka">
+    <div class="obal hlavicka__obal">
+      <div class="hlavicka__jmeno">
+        <h1>Jaroslav Kučera</h1>
+        <p class="podtitul">Automatizace a&nbsp;reporty v&nbsp;Pythonu pro malé firmy</p>
+      </div>
+      <nav aria-label="Hlavní navigace">
+        <ul class="navigace">
+          <li><a href="#nabidka">Nabídka</a></li>
+          <li><a href="#ukazka">Ukázka</a></li>
+          <li><a href="#spoluprace">Jak spolupráce probíhá</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah">
+    <section id="nabidka" class="sekce" aria-labelledby="nabidka-nadpis">
+      <div class="obal obal--uzky">
+        <h2 id="nabidka-nadpis">Nabídka</h2>
+        <p class="uvod">Pomáhám malým firmám, které mají čísla rozházená v&nbsp;exportech z&nbsp;e-shopu, ručně vedených tabulkách a&nbsp;skladových souborech a&nbsp;každý týden je někdo pracně skládá dohromady. Připravím automatický report, který data sám načte, vyčistí (sjednotí formáty, opraví překlepy, vyřadí duplicity) a&nbsp;zapíše, co přesně upravil. Výsledkem je přehled na jednu stránku: tržby, náklady, marže, co dochází na skladě a&nbsp;co se v&nbsp;daném týdnu chovalo neobvykle&nbsp;– v&nbsp;Excelu i&nbsp;v&nbsp;PDF. Ovládá se jedním tlačítkem a&nbsp;nic neodejde, dokud report neschválíte.</p>
+        <p>Řešení stavím na vašich stávajících souborech, takže nemusíte měnit systémy ani zvyky. Na vašich datech ho nejdřív pustíme souběžně s&nbsp;ručním postupem, abyste viděli, že čísla sedí.</p>
+      </div>
+    </section>
+
+    <section id="ukazka" class="sekce sekce--tonovana" aria-labelledby="ukazka-nadpis">
+      <div class="obal">
+        <h2 id="ukazka-nadpis" class="ukazka__nadpis">Ukázka na vymyšlených datech</h2>
+        <figure class="ukazka">
+          <a class="ukazka__obrazek" href="assets/panel.png" target="_blank" rel="noopener">
+            <img src="assets/panel.png" width="1920" height="2881"
+                 alt="Ovládací panel týdenního reportu: tlačítka Vygenerovat report a Schválit a odeslat, hlavní zjištění, ukazatele tržeb a zisku a graf tržeb po dnech.">
+          </a>
+          <figcaption>Ovládací panel ukázky (vymyšlená data fiktivní firmy)</figcaption>
+        </figure>
+        <div class="obal--uzky ukazka__text">
+          <p>Funkční ukázka na vymyšlených datech fiktivního e-shopu s&nbsp;kávou. Kód je veřejně na GitHubu.</p>
+          <p class="tlacitka">
+            <a class="tlacitko tlacitko--hlavni" href="https://github.com/Kucera1/portfolio-report-demo/blob/main/docs/pripadova-studie.md" target="_blank" rel="noopener">Případová studie</a>
+            <a class="tlacitko" href="https://github.com/Kucera1/portfolio-report-demo" target="_blank" rel="noopener">Kód ukázky na GitHubu</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="priklad" class="sekce" aria-labelledby="priklad-nadpis">
+      <div class="obal obal--uzky">
+        <h2 id="priklad-nadpis">Příklad</h2>
+        <blockquote class="priklad">
+          <p>V&nbsp;týdnu 41/2026 klesl provozní zisk o&nbsp;64&nbsp;%. Report ale pokles rozložil: většinu způsobilo načasování pravidelných plateb (tento týden mzdy, minulý týden nájem). Zisk bez nich klesl jen o&nbsp;13,7&nbsp;%, hlavně kvůli drahé marketingové kampani. Majitel tak nevidí jen číslo, ale i&nbsp;důvod.</p>
+        </blockquote>
+        <p class="poznamka">Jde o&nbsp;vymyšlená data fiktivní firmy, ne o&nbsp;reálného klienta.</p>
+      </div>
+    </section>
+
+    <section id="spoluprace" class="sekce sekce--tonovana" aria-labelledby="spoluprace-nadpis">
+      <div class="obal obal--uzky">
+        <h2 id="spoluprace-nadpis">Jak spolupráce probíhá</h2>
+        <ol class="kroky">
+          <li>
+            <h3>Seznámení (zdarma)</h3>
+            <p>Napíšete mi, jak dnes sestavujete týdenní nebo měsíční přehled. Řeknu vám, jestli a&nbsp;jak to jde zautomatizovat, a&nbsp;navrhnu rozsah.</p>
+          </li>
+          <li>
+            <h3>Písemná dohoda</h3>
+            <p>Předem se shodneme, co přesně dostanete: které zdroje dat, jaký výstup a&nbsp;kdo ho schvaluje. Cena je pevná za dohodnutý rozsah, žádné překvapení na konci.</p>
+          </li>
+          <li>
+            <h3>Zkušební provoz</h3>
+            <p>Řešení stavím na vašich stávajících souborech. Několik týdnů běží souběžně s&nbsp;vaším ručním postupem, abyste viděli, že čísla sedí.</p>
+          </li>
+          <li>
+            <h3>Předání</h3>
+            <p>Když výsledky potvrdíte, předám vám řešení a&nbsp;ukážu, jak se používá. Report se nikdy neodešle, dokud ho nezkontrolujete a&nbsp;neschválíte.</p>
+          </li>
+          <li>
+            <h3>Podpora</h3>
+            <p>Po předání opravuji chyby po dobu dohodnutou předem. Potom si můžete domluvit pravidelnou údržbu, nebo mě oslovit podle potřeby.</p>
+          </li>
+        </ol>
+
+        <div class="podminky">
+          <div class="podminky__blok">
+            <h3>Co je v&nbsp;ceně</h3>
+            <ul>
+              <li>dohodnutý rozsah</li>
+              <li>testování na vašich datech</li>
+              <li>zaškolení</li>
+              <li>podpora po předání</li>
+            </ul>
+          </div>
+          <div class="podminky__blok">
+            <h3>Za příplatek</h3>
+            <ul>
+              <li>nové zdroje dat</li>
+              <li>nové přehledy</li>
+              <li>změna formátu vašich exportů</li>
+            </ul>
+          </div>
+          <div class="podminky__blok">
+            <h3>Vaše data</h3>
+            <p>Data zůstávají u&nbsp;vás. Bez vašeho souhlasu je nikomu nepředávám.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jak-pracuji" class="sekce" aria-labelledby="jak-pracuji-nadpis">
+      <div class="obal obal--uzky">
+        <h2 id="jak-pracuji-nadpis">Jak pracuji</h2>
+        <p>Používám AI nástroje, ale každé řešení sám navrhuji, kontroluji a&nbsp;testuji. Hotový report počítá sám a&nbsp;nepotřebuje AI ani internet.</p>
+      </div>
+    </section>
+
+    <section id="kontakt" class="sekce sekce--kontakt" aria-labelledby="kontakt-nadpis">
+      <div class="obal obal--uzky">
+        <h2 id="kontakt-nadpis">Kontakt</h2>
+        <p class="uvod">Napište mi, jak dnes sestavujete týdenní nebo měsíční přehled, a&nbsp;řeknu vám, jestli a&nbsp;za kolik to půjde zautomatizovat.</p>
+        <p><a class="tlacitko tlacitko--hlavni kontakt__odkaz" href="mailto:KONTAKT_EMAIL_DOPLNIT">KONTAKT_EMAIL_DOPLNIT</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="paticka">
+    <div class="obal paticka__obal">
+      <p>Jaroslav Kučera</p>
+      <p><a href="https://github.com/Kucera1" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </footer>
+</body>
+</html>
