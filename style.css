@@ -101,14 +101,8 @@ p {
   padding: 0 1.25rem;
 }
 
-.obal--uzky {
+.text {
   max-width: var(--sirka-uzka);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.obal.obal--uzky {
-  padding: 0 1.25rem;
 }
 
 /* Odkaz pro čtečky a klávesnici */
@@ -189,49 +183,82 @@ p {
   line-height: 1.6;
 }
 
-/* Ukázka */
-.ukazka {
-  margin: 1.5rem auto 2rem;
-  max-width: 56rem;
+/* Ukázky – karty */
+.karty {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.ukazka__nadpis {
-  max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ukazka__obrazek {
-  display: block;
-  max-height: 34rem;
-  overflow: hidden;
+.karta {
+  display: flex;
+  flex-direction: column;
+  background: var(--pozadi);
   border: 1px solid var(--linka);
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 6%), 0 8px 24px rgb(0 0 0 / 6%);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%), 0 6px 18px rgb(0 0 0 / 5%);
+  overflow: hidden;
 }
 
-.ukazka figcaption {
-  margin-top: 0.75rem;
+.karta__obrazek {
+  margin: 0;
+  border-bottom: 1px solid var(--linka);
+}
+
+.karta__obrazek a {
+  display: block;
+  background: #ffffff;
+}
+
+.karta__img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.karta__img--vyrez {
+  object-fit: cover;
+  object-position: top;
+}
+
+.karta__img--graf {
+  object-fit: contain;
+  padding: 0.75rem;
+}
+
+.karta__obrazek figcaption {
+  padding: 0.6rem 1.25rem;
   color: var(--text-tlumeny);
   font-size: 0.9375rem;
-  text-align: center;
+  background: var(--pozadi);
 }
 
-.ukazka__text {
-  text-align: center;
+.karta__telo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.karta__telo h3 {
+  font-size: 1.25rem;
+}
+
+.karta__telo .tlacitka {
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 .tlacitka {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin: 0;
 }
 
 .tlacitko {
   display: inline-block;
+  text-align: center;
   padding: 0.7rem 1.3rem;
   border: 2px solid var(--akcent);
   border-radius: 8px;
@@ -258,6 +285,10 @@ p {
 }
 
 /* Příklad */
+.priklad-blok {
+  margin-top: 3rem;
+}
+
 .priklad {
   margin: 0 0 1rem;
   padding: 1.25rem 1.5rem;
@@ -314,6 +345,7 @@ p {
 }
 
 .podminky {
+  max-width: 56rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   gap: 1rem;
@@ -335,11 +367,40 @@ p {
   margin: 0;
 }
 
-/* Kontakt */
-.sekce--kontakt {
-  text-align: center;
+/* Odrážky a štítky */
+.seznam {
+  margin: 0;
+  padding-left: 1.3rem;
 }
 
+.seznam li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.2rem;
+}
+
+.seznam li::marker {
+  color: var(--akcent);
+}
+
+.stitky {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.stitky li {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--linka);
+  border-radius: 999px;
+  background: var(--pozadi);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+/* Kontakt */
 .kontakt__odkaz {
   margin-top: 0.5rem;
   word-break: break-all;
