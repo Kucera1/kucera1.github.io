@@ -105,6 +105,11 @@ p {
   max-width: var(--sirka-uzka);
 }
 
+/* Slovo, které se nemá rozdělit na konci řádku (např. „e-shopy“) */
+.nowrap {
+  white-space: nowrap;
+}
+
 /* Odkaz pro čtečky a klávesnici */
 .preskocit {
   position: absolute;
