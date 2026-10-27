@@ -15,4 +15,3 @@ Dvojklikem otevřete soubor `index.html` v prohlížeči. Nic dalšího není po
 - `style.css` – vzhled (světlý i tmavý režim podle nastavení systému)
 - `assets/panel.png` – screenshot ovládacího panelu z ukázky
   [portfolio-report-demo](https://github.com/Kucera1/portfolio-report-demo) (vymyšlená data)
-- `assets/simulator.png` – graf ze simulátoru (syntetická data)
